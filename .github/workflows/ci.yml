@@ -51,17 +51,17 @@ jobs:
       matrix:
         include:
           - name: mingw-check
-            os: ubuntu-20.04-4core-16gb
+            os: warp-ubuntu-latest-x64-2x
             env: {}
           - name: mingw-check-tidy
-            os: ubuntu-20.04-4core-16gb
+            os: warp-ubuntu-latest-x64-2x
             env: {}
           - name: x86_64-gnu-llvm-16
             env:
               ENABLE_GCC_CODEGEN: "1"
-            os: ubuntu-20.04-16core-64gb
+            os: warp-ubuntu-latest-x64-2x
           - name: x86_64-gnu-tools
-            os: ubuntu-20.04-16core-64gb
+            os: warp-ubuntu-latest-x64-2x
             env: {}
     timeout-minutes: 600
     runs-on: "${{ matrix.os }}"
